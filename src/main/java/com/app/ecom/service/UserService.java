@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class UserService {
+
     private final UserRepository userRepository;
 //    private List<User> userList = new ArrayList<>();
 //    private Long nextId = 1L;
@@ -78,7 +79,6 @@ public class UserService {
             addressDTO.setCity(user.getAddress().getCity());
             addressDTO.setState(user.getAddress().getState());
             addressDTO.setCountry(user.getAddress().getCountry());
-            addressDTO.setZipCode(user.getAddress().getZipCode());
             response.setAddress(addressDTO);
         }
         return response;
